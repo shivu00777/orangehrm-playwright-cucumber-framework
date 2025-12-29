@@ -1,0 +1,12 @@
+{
+  "name": "orangehrm-cucumber-playwright",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cucumber-js",
+    "headed": "HEADLESS=false cucumber-js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.5.0",
+    "@playwright/test": "^1.57.0"
+  }
+}
