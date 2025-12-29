@@ -1,47 +1,37 @@
 🧪 OrangeHRM Automation Framework
+Playwright + Cucumber (BDD)
 
-Playwright + Cucumber (BDD) + Page Object Model
-
-This repository contains an end-to-end automation testing framework built using Playwright with Cucumber (BDD) and implemented following the Page Object Model (POM) design pattern.
-
-The framework automates critical workflows of the OrangeHRM application, including employee creation, update, search, and deletion.
+This repository contains an end-to-end automation testing framework built using Playwright with Cucumber (BDD).
+The framework automates core workflows of the OrangeHRM application using Cucumber feature files and step definitions, where UI interactions are handled directly within step definitions.
 
 🚀 Tech Stack
-
 Language: JavaScript (Node.js)
 
 Automation Tool: Playwright
 
 BDD Framework: Cucumber
 
-Design Pattern: Page Object Model (POM)
-
-Assertion Library: Playwright Test Assertions
+Assertions: Playwright Test Assertions
 
 Version Control: Git & GitHub
 
 📁 Project Structure
-orangehrm-cucumber-playwright/
+orangehrm-playwright-cucumber-framework/
 │
 ├── features/
-│   ├── orangehrm.feature
+│   └── orangehrm.feature
 │
-├── features/step-definitions/
+├── step-definitions/
 │   └── orangehrm.steps.js
-│
-├── pages/
-│   ├── LoginPage.js
-│   ├── DashboardPage.js
-│   └── PIMPage.js
 │
 ├── cucumber.js
 ├── package.json
 ├── package-lock.json
 └── .gitignore
 
-✅ Automated Test Scenario
 
-The framework automates the following end-to-end flow:
+✅ Automated Test Scenario
+The framework automates the following end-to-end workflow:
 
 Launch OrangeHRM application
 
@@ -51,15 +41,17 @@ Navigate to PIM module
 
 Add a new employee
 
-Update employee personal details
+Update employee nationality and gender
 
-Search employee
+Search for employee
 
 Delete employee
 
 Logout from application
 
+
 ⚙️ Prerequisites
+Make sure you have the following installed:
 
 Node.js (v18 or above recommended)
 
@@ -68,7 +60,6 @@ Git
 VS Code (or any IDE)
 
 📦 Installation
-
 Clone the repository:
 
 git clone https://github.com/shivu00777/orangehrm-playwright-cucumber-framework.git
@@ -89,8 +80,7 @@ Install Playwright browsers:
 npx playwright install
 
 ▶️ How to Run Tests
-
-Run tests in default mode:
+Run tests with default settings:
 
 npm test
 
@@ -99,28 +89,32 @@ Run tests with browser visible:
 
 npm run headed
 
+
 🧠 Framework Highlights
-
 ✔ BDD approach using Cucumber (Gherkin syntax)
-✔ Clean Page Object Model architecture
-✔ Reusable and maintainable test code
-✔ Stable locators and URL-based validations
-✔ Industry-standard project structure
-✔ GitHub version-controlled automation framework
+✔ Real application automation (OrangeHRM)
+✔ Clear and readable step definitions
+✔ URL-based and UI-based validations
+✔ Beginner-friendly Cucumber + Playwright setup
+✔ GitHub version-controlled automation project
 
-📌 Sample Feature Snippet
+
+📌 Sample Feature File
+Feature: OrangeHRM Employee Management
+
 Scenario: Add and delete employee using Playwright with Cucumber
   Given I open the OrangeHRM application
   When I login with username "Admin" and password "admin123"
   Then I should see the dashboard page
 
-👨‍💻 Author
 
+👨‍💻 Author
 Shivam Sharma
 QA / SDET Automation Engineer
 GitHub: https://github.com/shivu00777
 
 📈 Future Enhancements
+Refactor framework using Page Object Model (POM)
 
 Add Cucumber HTML reporting
 
@@ -130,6 +124,6 @@ Add Hooks (Before / After)
 
 Enable parallel execution
 
-Externalize test data & environment configs
+Externalize environment configurations
 
 ⭐ If you find this project useful, feel free to star the repository!
